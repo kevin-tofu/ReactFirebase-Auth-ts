@@ -29,7 +29,7 @@ function AppLogin() {
               <Route path='/signup' element={<Signup/>} />
               <Route path='/login' element={<Login/>} />
               <Route path='/forgot-password' element={<ForgotPassword/>} />
-              <Route path="*" element={<NoMatch />} />
+              <Route path='*' element={<NoMatch />} />
             </Routes>
           </AuthProvider>
         </Router>
