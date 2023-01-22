@@ -1,5 +1,9 @@
 function NoMatch() {
-  return <h3>このページは存在しません</h2>;
+  return (
+    <div>
+      <h3>No pages match</h3>
+    </div>
+  );
 }
 
 export default NoMatch;
