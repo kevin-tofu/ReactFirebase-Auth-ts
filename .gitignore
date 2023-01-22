@@ -23,4 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-src/db.ts
+# src/db.ts
+.env
+.env.development
