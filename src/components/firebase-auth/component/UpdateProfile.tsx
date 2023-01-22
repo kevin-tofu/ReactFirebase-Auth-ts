@@ -32,7 +32,7 @@ function UpdateProfile() {
         history('/')
       }
     } catch ( e ){
-      console.log(e)
+      // console.log(e)
       setError('Failed to update account')
     } finally {
       setLoading(false)

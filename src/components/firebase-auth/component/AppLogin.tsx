@@ -7,7 +7,7 @@ import {
   Signup, PrivateRoute, 
   UpdateProfile, ForgotPassword, 
   Login, Dashboard, NoMatch } from '../Index'
-// import { auth } from '../../../db'
+import 'bootstrap/dist/css/bootstrap.min.css';
 // https://dev.to/iamandrewluca/private-route-in-react-router-v6-lg5
 
 function AppLogin() {

@@ -12,7 +12,7 @@ function Dashboard() {
     setError('')
 
     try {
-      console.log(currentUser)
+      // console.log(currentUser)
       await logout()
       // history.push('/login')
       history('/login')

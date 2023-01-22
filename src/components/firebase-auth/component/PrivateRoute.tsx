@@ -16,7 +16,6 @@ function PrivateRoute({ children } : Props){
   useEffect(() => {
     if (currentUser) {
     } else {
-      console.log('redirect to login')
       redirect('/login');
     }
   });
