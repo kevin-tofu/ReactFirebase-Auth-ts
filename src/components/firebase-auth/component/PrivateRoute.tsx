@@ -15,12 +15,16 @@ function PrivateRoute({ children } : Props){
   
   useEffect(() => {
     if (currentUser) {
+    } else {
+      console.log('redirect to login')
       redirect('/login');
     }
   });
 
   return (
-    <div></div>
+    <div>
+      { currentUser ? children : <></> }
+    </div>
   );
   // return currentUser ? children : <Redirect to='/login' />;
   
