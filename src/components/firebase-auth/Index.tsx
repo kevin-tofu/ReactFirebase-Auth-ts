@@ -5,6 +5,7 @@ import UpdateProfile from './component/UpdateProfile'
 import ForgotPassword from './component/ForgotPassword'
 import Login from './component/Login'
 import Dashboard from './component/Dashboard'
+import NoMatch from './component/NoMatch'
 // import Dashboard from './firebase-auth/component/Dashboard'
 export { 
   AppLogin, 
@@ -13,5 +14,6 @@ export {
   UpdateProfile, 
   ForgotPassword, 
   Login, 
-  Dashboard
+  Dashboard,
+  NoMatch
 }

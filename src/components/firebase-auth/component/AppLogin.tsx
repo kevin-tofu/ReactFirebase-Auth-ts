@@ -3,7 +3,10 @@
 import { Container } from 'react-bootstrap'
 import { AuthProvider } from '../context/AuthContext'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { Signup, PrivateRoute, UpdateProfile, ForgotPassword, Login, Dashboard } from '../Index'
+import { 
+  Signup, PrivateRoute, 
+  UpdateProfile, ForgotPassword, 
+  Login, Dashboard, NoMatch } from '../Index'
 // import { auth } from '../../../db'
 // https://dev.to/iamandrewluca/private-route-in-react-router-v6-lg5
 
@@ -17,18 +20,16 @@ function AppLogin() {
         <Router>
           <AuthProvider>
             <Routes>
-              <PrivateRoute>
-                <Route path='/'
-                  element={<Dashboard/>}
-                />
-              </PrivateRoute>
+              <Route path='/'
+                element={<PrivateRoute><Dashboard/></PrivateRoute>}
+              />
               <Route path='/update-profile'
                 element={<PrivateRoute><UpdateProfile/></PrivateRoute>}
               />
-              
               <Route path='/signup' element={<Signup/>} />
               <Route path='/login' element={<Login/>} />
               <Route path='/forgot-password' element={<ForgotPassword/>} />
+              <Route path="*" element={<NoMatch />} />
             </Routes>
           </AuthProvider>
         </Router>

@@ -1,4 +1,6 @@
-import { Navigate } from 'react-router-dom'
+import { useEffect } from 'react'
+// import { Navigate } from 'react-router-dom'
+import { redirect } from "react-router-dom";
 import { useAuth } from '../context/AuthContext'
 interface Props {
   // children: string | JSX.Element | JSX.Element[] | () => JSX.Element
@@ -10,6 +12,19 @@ function PrivateRoute({ children } : Props){
   const { currentUser } = useAuth()
   // const history = useNavigate()
 
-  return currentUser ? children : <Navigate to='/login' />;
+  
+  useEffect(() => {
+    if (currentUser) {
+      redirect('/login');
+    }
+  });
+
+  return (
+    <div></div>
+  );
+  // return currentUser ? children : <Redirect to='/login' />;
+  
+
+
 }
 export default PrivateRoute;
